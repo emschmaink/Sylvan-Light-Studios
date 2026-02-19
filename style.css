@@ -1,0 +1,111 @@
+/* Sylvan Light Studios - Homepage Styles */
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #F7F5EF;
+  color: #6F5E4B;
+}
+
+.top-bar {
+  background: #8B9278;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.header {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 3px solid #BFA36A;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #6F5E4B;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("https://i.imgur.com/9z6sQ7k.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.sale-box {
+  border: 4px solid #BFA36A;
+  display: inline-block;
+  padding: 40px;
+  background: white;
+}
+
+.sale-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.sale-box p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.button {
+  display: inline-block;
+  background: #8B9278;
+  color: white;
+  padding: 15px 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.product h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  background: #BFA36A;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.buy-button:hover,
+.button:hover {
+  opacity: 0.9;
+}
