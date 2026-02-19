@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #F7F5EF;
+    color: #6F5E4B;
+}
+
+.top-bar {
+    background: #8B9278;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid #BFA36A;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #6F5E4B;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url("https://i.imgur.com/9z6sQ7k.png");
+}
+
+.sale-box {
+    border: 4px solid #BFA36A;
+    display: inline-block;
+    padding: 40px;
+    background: white;
+}
+
+.sale-box h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.sale-box p {
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    background: #8B9278;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.product h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.buy-button {
+    background: #BFA36A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+Be sure to check out our socials to learn about our mission to make Bible study, journaling, and organization more accessible for women.
+</div>
+
+<div class="header">
+<div class="logo">Sylvan Light Studios</div>
+</div>
+
+<div class="hero">
+<div class="sale-box">
+<h1>50% OFF</h1>
+<p>SITEWIDE OPENING SALE</p>
+<p>Use code <b>LIGHT26</b> through March</p>
+<a href="#shop" class="button">Shop Now</a>
+</div>
+</div>
+
+<div class="section">
+<h2>Free Materials Just For You</h2>
+<p>We are committed to making Bible studies and organization more enjoyable and available.</p>
+<p>Download free planners, prayer pages, and study guides to get started.</p>
+<a href="#" class="button">Get Freebies</a>
+</div>
+
+<div id="shop" class="section">
+<h2>Christian Planner Templates</h2>
+
+<div class="products">
+
+<div class="product">
+<h3>Prayer Journal</h3>
+<p>Daily prayer pages and reflection templates.</p>
+<button class="buy-button" onclick="startCheckout('prayer-journal')">Buy Now</button>
+</div>
+
+<div class="product">
+<h3>Bible Study Planner</h3>
+<p>Guided scripture study and notes.</p>
+<button class="buy-button" onclick="startCheckout('bible-planner')">Buy Now</button>
+</div>
+
+<div class="product">
+<h3>Weekly Devotional</h3>
+<p>Faith-based weekly planning pages.</p>
+<button class="buy-button" onclick="startCheckout('devotional')">Buy Now</button>
+</div>
+
+<div class="product">
+<h3>Faith Habit Tracker</h3>
+<p>Track prayer, scripture, and spiritual habits.</p>
+<button class="buy-button" onclick="startCheckout('habit-tracker')">Buy Now</button>
+</div>
+
+</div>
+</div>
+
+<script>
+function startCheckout(product) {
+    // This is where Stripe (or another checkout) connects
+    // Replace this URL with your Stripe Payment Link or Checkout Session
+    const checkoutLinks = {
+        "prayer-journal": "https://buy.stripe.com/yourlink1",
+        "bible-planner": "https://buy.stripe.com/yourlink2",
+        "devotional": "https://buy.stripe.com/yourlink3",
+        "habit-tracker": "https://buy.stripe.com/yourlink4"
+    };
+
+    window.location.href = checkoutLinks[product];
+}
+</script>
+
+</body>
+</html>
