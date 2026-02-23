@@ -1,176 +1,312 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
-<style>
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #F7F5EF;
-    color: #6F5E4B;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sylvan Light Studios</title>
 
-.top-bar {
-    background: #8B9278;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-}
+  <!-- Optional: Google Font similar vibe (swap if you already have a font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-.header {
-    background: white;
-    padding: 30px;
-    text-align: center;
-    border-bottom: 3px solid #BFA36A;
-}
+  <style>
+    :root{
+      --sage: #8b8f67;
+      --sage-dark: #6f7450;
+      --cream: #fbf4e8;
+      --ink: #6a563f;
+      --border: rgba(106, 86, 63, .35);
+      --max: 980px;
+      --shadow: 0 10px 24px rgba(0,0,0,.08);
+      --radius: 999px;
+    }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #6F5E4B;
-}
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--ink);
+      background: var(--cream);
+    }
 
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: url("https://i.imgur.com/9z6sQ7k.png");
-}
+    /* ===== Page background with patterned sides ===== */
+    .page{
+      min-height: 100vh;
+      background: var(--cream);
+    }
 
-.sale-box {
-    border: 4px solid #BFA36A;
-    display: inline-block;
-    padding: 40px;
-    background: white;
-}
+    /* top thin strip like screenshot */
+    .top-strip{
+      height: 52px;
+      background: var(--sage);
+    }
 
-.sale-box h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin-bottom: 10px;
-}
+    /* Content area with patterned side panels */
+    .frame{
+      display: grid;
+      grid-template-columns: minmax(140px, 1fr) minmax(0, var(--max)) minmax(140px, 1fr);
+      align-items: stretch;
+      background: var(--cream);
+    }
 
-.sale-box p {
-    font-size: 18px;
-}
+    .side{
+      background-image: url("assets/background.png"); /* <-- your side pattern */
+      background-repeat: repeat;
+      background-size: 340px auto;
+      opacity: .35; /* soften pattern like screenshot */
+    }
 
-.button {
-    display: inline-block;
-    background: #8B9278;
-    color: white;
-    padding: 15px 30px;
-    margin-top: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
+    .center{
+      background: var(--cream);
+      padding: 0 22px 70px;
+    }
 
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
+    /* ===== Header / Logo row ===== */
+    header{
+      padding: 18px 0 8px;
+      border-bottom: 3px solid rgba(139, 143, 103, .55);
+    }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-}
+    .brand-row{
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+    }
 
-.product {
-    background: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
+    .icon-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 2px solid rgba(106, 86, 63, .35);
+      background: rgba(255,255,255,.35);
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform .12s ease;
+    }
+    .icon-btn:hover{ transform: translateY(-1px); }
 
-.product h3 {
-    font-family: 'Playfair Display', serif;
-}
+    .left-icons{ justify-self: start; display:flex; gap:10px; }
+    .right-icons{ justify-self: end; display:flex; gap:10px; }
 
-.buy-button {
-    background: #BFA36A;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-}
-</style>
+    .logo{
+      text-align:center;
+      font-size: clamp(34px, 4vw, 54px);
+      letter-spacing: .5px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.05;
+      position: relative;
+    }
+
+    /* little flourishes around the title (optional) */
+    .logo:before,
+    .logo:after{
+      content:"";
+      display:inline-block;
+      width: 44px;
+      height: 18px;
+      background: url("assets/flourish.png") center / contain no-repeat; /* optional flourish image */
+      vertical-align: middle;
+      margin: 0 12px;
+      opacity: .75;
+    }
+    /* If you don’t have flourish.png, comment the :before/:after blocks out. */
+
+    /* ===== Nav ===== */
+    nav{
+      margin-top: 10px;
+      border-top: 3px solid rgba(139, 143, 103, .55);
+      border-bottom: 3px solid rgba(139, 143, 103, .55);
+      background: rgba(255,255,255,.18);
+    }
+    .nav-inner{
+      display:flex;
+      justify-content: center;
+      gap: clamp(18px, 4vw, 60px);
+      padding: 10px 10px;
+      flex-wrap: wrap;
+    }
+    nav a{
+      text-decoration:none;
+      color: var(--ink);
+      font-size: 22px;
+      letter-spacing: .5px;
+      font-weight: 500;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    /* ===== Hero ===== */
+    .hero{
+      text-align:center;
+      padding: 28px 0 6px;
+    }
+    .hero p{
+      margin: 0 auto 18px;
+      max-width: 700px;
+      font-size: 26px;
+      line-height: 1.25;
+      color: rgba(106, 86, 63, .92);
+    }
+
+    .sale-banner{
+      display: block;
+      max-width: 760px;
+      margin: 12px auto 22px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(106, 86, 63, .22);
+      background: #fff;
+    }
+    .sale-banner img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 14px 42px;
+      border-radius: var(--radius);
+      background: var(--sage);
+      color: #fff;
+      text-decoration:none;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border: 2px solid rgba(0,0,0,.08);
+      box-shadow: 0 8px 18px rgba(0,0,0,.12);
+      transition: transform .12s ease, background .12s ease;
+    }
+    .cta:hover{
+      transform: translateY(-1px);
+      background: var(--sage-dark);
+    }
+
+    /* ===== Section title like screenshot ===== */
+    .section-title{
+      text-align:center;
+      margin: 52px 0 10px;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 500;
+      letter-spacing: .5px;
+    }
+    .section-text{
+      text-align:center;
+      max-width: 740px;
+      margin: 0 auto;
+      font-size: 26px;
+      line-height: 1.35;
+      color: rgba(106, 86, 63, .92);
+    }
+
+    /* ===== Responsive tweaks ===== */
+    @media (max-width: 900px){
+      .frame{
+        grid-template-columns: 0 minmax(0, var(--max)) 0; /* hide side panels on mobile */
+      }
+      .side{ display:none; }
+      .logo:before, .logo:after{ display:none; } /* keep title clean on small screens */
+    }
+
+    @media (max-width: 520px){
+      .icon-btn{ width: 38px; height: 38px; }
+      nav a{ font-size: 20px; }
+      .hero p, .section-text{ font-size: 22px; }
+      .cta{ font-size: 26px; padding: 12px 34px; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page">
+    <div class="top-strip"></div>
 
-<div class="top-bar">
-Be sure to check out our socials to learn about our mission to make Bible study, journaling, and organization more accessible for women.
-</div>
+    <div class="frame">
+      <div class="side" aria-hidden="true"></div>
 
-<div class="header">
-<div class="logo">Sylvan Light Studios</div>
-</div>
+      <div class="center">
+        <header>
+          <div class="brand-row">
+            <div class="left-icons">
+              <!-- Heart icon button (link wherever you want) -->
+              <a class="icon-btn" href="#favorites" aria-label="Favorites">
+                ♥
+              </a>
+            </div>
 
-<div class="hero">
-<div class="sale-box">
-<h1>50% OFF</h1>
-<p>SITEWIDE OPENING SALE</p>
-<p>Use code <b>LIGHT26</b> through March</p>
-<a href="#shop" class="button">Shop Now</a>
-</div>
-</div>
+            <h1 class="logo">Sylvan Light Studios</h1>
 
-<div class="section">
-<h2>Free Materials Just For You</h2>
-<p>We are committed to making Bible studies and organization more enjoyable and available.</p>
-<p>Download free planners, prayer pages, and study guides to get started.</p>
-<a href="#" class="button">Get Freebies</a>
-</div>
+            <div class="right-icons">
+              <!-- Cart icon button -->
+              <a class="icon-btn" href="#cart" aria-label="Cart">
+                🧺
+              </a>
+            </div>
+          </div>
 
-<div id="shop" class="section">
-<h2>Christian Planner Templates</h2>
+          <nav>
+            <div class="nav-inner">
+              <a href="#home">HOME</a>
+              <a href="#about">ABOUT</a>
+              <a href="#shop">SHOP</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#policies">POLICIES</a>
+            </div>
+          </nav>
+        </header>
 
-<div class="products">
+        <main id="home">
+          <section class="hero">
+            <p>
+              We are committed to making Bible studies and life organization more enjoyable and available.
+              Browse our digital templates and designs!
+            </p>
 
-<div class="product">
-<h3>Prayer Journal</h3>
-<p>Daily prayer pages and reflection templates.</p>
-<button class="buy-button" onclick="startCheckout('prayer-journal')">Buy Now</button>
-</div>
+            <!-- SALE BANNER IMAGE -->
+            <a class="sale-banner" href="#shop" aria-label="Shop the sale">
+              <img src="assets/images/sale-banner.png"
+                   alt="50% off sitewide opening sale. Use code LIGHT26 through the month of March." />
+            </a>
 
-<div class="product">
-<h3>Bible Study Planner</h3>
-<p>Guided scripture study and notes.</p>
-<button class="buy-button" onclick="startCheckout('bible-planner')">Buy Now</button>
-</div>
+            <a class="cta" href="#shop">SHOP NOW</a>
+          </section>
 
-<div class="product">
-<h3>Weekly Devotional</h3>
-<p>Faith-based weekly planning pages.</p>
-<button class="buy-button" onclick="startCheckout('devotional')">Buy Now</button>
-</div>
+          <section id="freebies">
+            <h2 class="section-title">Free Materials Just For You</h2>
+            <p class="section-text">
+              We are committed to making Bible studies and organization more enjoyable and available!<br/>
+              Here are some freebies to help get you started!
+            </p>
+          </section>
 
-<div class="product">
-<h3>Faith Habit Tracker</h3>
-<p>Track prayer, scripture, and spiritual habits.</p>
-<button class="buy-button" onclick="startCheckout('habit-tracker')">Buy Now</button>
-</div>
+          <!-- Add more sections below as you build them -->
+          <section id="about" style="margin-top:70px;">
+            <!-- placeholder -->
+          </section>
+          <section id="shop" style="margin-top:70px;">
+            <!-- placeholder -->
+          </section>
+          <section id="contact" style="margin-top:70px;">
+            <!-- placeholder -->
+          </section>
+          <section id="policies" style="margin-top:70px;">
+            <!-- placeholder -->
+          </section>
 
-</div>
-</div>
+        </main>
+      </div>
 
-<script>
-function startCheckout(product) {
-    // This is where Stripe (or another checkout) connects
-    // Replace this URL with your Stripe Payment Link or Checkout Session
-    const checkoutLinks = {
-        "prayer-journal": "https://buy.stripe.com/yourlink1",
-        "bible-planner": "https://buy.stripe.com/yourlink2",
-        "devotional": "https://buy.stripe.com/yourlink3",
-        "habit-tracker": "https://buy.stripe.com/yourlink4"
-    };
-
-    window.location.href = checkoutLinks[product];
-}
-</script>
-
+      <div class="side" aria-hidden="true"></div>
+    </div>
+  </div>
 </body>
 </html>
