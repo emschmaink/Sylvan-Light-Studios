@@ -1,8 +1,6 @@
 :root{
   --sage: #888a65;
-
   --cream: #fff9f0
-
   --ink: #6a563f;
 
   --line: rgba(106, 86, 63, .35);
@@ -24,7 +22,7 @@ body{
 
 /* ===== Top strip ===== */
 .top-strip{
-  height: 56px;
+  height: 20px;
   background: var(--sage);
 }
 
@@ -39,7 +37,7 @@ body{
   background-image: url("assets/background.png");
   background-repeat: repeat;
   background-size: 380px auto;
-  opacity: .45; /* adjust if you want pattern stronger/weaker */
+  opacity: 50; /* adjust if you want pattern stronger/weaker */
 }
 
 /* Center column */
