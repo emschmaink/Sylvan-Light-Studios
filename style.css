@@ -1,9 +1,7 @@
 :root{
-  --sage: #8b8f67;
-  --sage-dark: #6f7450;
+  --sage: #888a65;
 
-  --cream: #fbf4e8;
-  --cream-2: #f7efe2;
+  --cream: #fff9f0
 
   --ink: #6a563f;
 
@@ -129,24 +127,15 @@ body{
   line-height: 1.25;
   color: rgba(106, 86, 63, .92);
 }
-
-/* Sale banner framed like an insert */
-.sale-frame{
-  display: block;
-  max-width: 780px;
-  margin: 0 auto 22px;
-
-  padding: 12px;
-  background: var(--cream-2);
-  border: 2px solid var(--line-strong);
-  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+.sale-banner{
+  width: min(860px, 95%);
+  margin: 16px auto 22px;
 }
 
-.sale-frame img{
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 2px solid rgba(106,86,63,.18);
+.sale-banner img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
 /* CTA button */
