@@ -146,6 +146,7 @@ body{
 }
 
 .sale-banner img{
+  text-align: center;
   display: block;
   width: 100%;
   height: auto;
