@@ -66,20 +66,28 @@ body{
 }
 
 /* Title row */
-.brand-row{
-  display: grid;
-  grid-template-columns: 90px 1fr 90px;
+.brand-row {
+  display: flex;
   align-items: center;
-  padding: 6px 0 10px;
-  border-bottom: 3px solid var(--sage-line);
+  justify-content: space-between;
 }
 
-.icon-plain{
-  justify-self: center;
-  text-decoration: none;
-  color: var(--ink);
-  font-size: 30px;
-  line-height: 1;
+.icon-plain img {
+  width: 34px;     /* adjust to match your reference */
+  height: auto;
+  display: block;
+}
+
+.icon-plain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.icon-plain:hover {
+  opacity: 0.7;
 }
 
 /* Logo image */
