@@ -57,7 +57,7 @@ body{
 /* Center column */
 .center{
   background: var(--cream);
-  padding: 0 34px 80px;
+  padding: 0 34px 40px;
 }
 
 /* Header */
