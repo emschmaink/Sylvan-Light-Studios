@@ -73,18 +73,17 @@ body{
   gap: 40px;   /* controls spacing between icon / logo / icon */
 }
 
-.icon-plain img {
-  width: 34px;     /* adjust to match your reference */
-  height: auto;
-  display: block;
-}
-
 .icon-plain {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  transition: opacity 0.2s ease;
+  padding: 6px;
+}
+
+.icon-plain img {
+  width: 28px;
+  height: auto;
+  display: block;
 }
 
 .icon-plain:hover {
