@@ -34,7 +34,6 @@ body{
   display: grid;
   grid-template-columns: minmax(170px, 1fr) minmax(0, var(--max)) minmax(170px, 1fr);
   background: var(--cream);
-  min-height: calc(100vh - 56px);
 }
 
 /* Patterned sides */
@@ -42,16 +41,6 @@ body{
   position: relative;
   background: url("assets/background.png") repeat;
   background-size: 380px auto;
-  min-height: calc(100vh - 56px);
-}
-
-/* Soft wash so pattern is visible but subtle */
-.side::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(255, 249, 240, 0.55); /* matches your cream */
-  pointer-events:none;
 }
 
 /* Center column */
