@@ -99,6 +99,7 @@ body{
 
 /* Nav band */
 .nav-band{
+  grid-column: 1 / -1;   /* ← THIS makes it span full width */
   background: var(--cream);
   border-top: 4px solid var(--sage-line);
   border-bottom: 4px solid var(--sage-line);
