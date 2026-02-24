@@ -69,7 +69,8 @@ body{
 .brand-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;   /* controls spacing between icon / logo / icon */
 }
 
 .icon-plain img {
@@ -100,9 +101,8 @@ body{
 .logo-img{
   display: block;
   margin: 0 auto;
-  width: min(900px, 92%);  /* controls size responsively */
-  height: auto;           /* preserves aspect ratio */
-  max-width: 100%;
+  width: min(650px, 85%);
+  height: auto;
 }
 
 /* Nav band */
