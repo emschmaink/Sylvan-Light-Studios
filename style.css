@@ -36,11 +36,24 @@ body{
   background: var(--cream);
 }
 
-/* Patterned sides */
-.side{
-  position: relative;
-  background: url("assets/background.png") repeat;
-  background-size: 380px auto;
+/* BODY BACKGROUND (Side Pattern) */
+body {
+  margin: 0;
+  background-color: #d8d2c7; /* outer background color */
+
+  background-image: 
+    url("assets/side-pattern.png"),
+    url("assets/side-pattern.png");
+
+  background-repeat: repeat-y, repeat-y;
+  background-position: left top, right top;
+}
+
+/* CENTER CONTENT WRAPPER */
+.page-wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+  background-color: #f4efe6; /* your main cream color */
 }
 
 /* Center column */
