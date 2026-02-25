@@ -11,7 +11,20 @@
 
   --max: 1040px;
   --nav-gap: clamp(18px, 4vw, 70px);
-  
+ 
+}
+
+/* Larger fonts on desktop */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem; /* ~40px on desktop */
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.3rem; /* ~21px on desktop */
+    line-height: 1.5;
+  }
 }
 
 *{ box-sizing: border-box; }
