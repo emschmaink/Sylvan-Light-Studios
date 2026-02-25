@@ -23,23 +23,31 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
   margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   color: var(--ink);
+  background-color: var(--cream);
 
   /* SIDE PATTERN */
-  background-color: var(--cream);
   background-image:
     url("assets/side-pattern.png"),
     url("assets/side-pattern.png");
+
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
-  background-size: 500px auto, 500px auto;
+
+  /* Adjust if needed: 900–1100px */
+  background-size: 900px auto, 900px auto;
 }
 
-/* Force brand text color everywhere */
+/* Force brand ink everywhere */
 h1, h2, h3, h4, h5, h6,
 p,
 a {
@@ -63,6 +71,8 @@ a {
   max-width: var(--max);
   margin: 0 auto;
   background-color: var(--cream);
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================
@@ -72,6 +82,8 @@ a {
 .site-header{
   padding: 10px 0 0;
   background-color: var(--cream);
+  position: relative;
+  z-index: 2;
 }
 
 .brand-row {
@@ -112,10 +124,12 @@ a {
 ========================= */
 
 .nav-band{
-  background: var(--cream);
+  background-color: var(--cream);
   border-top: 4px solid var(--sage-line);
   border-bottom: 4px solid var(--sage-line);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+  position: relative;
+  z-index: 2;
 }
 
 .nav-inner{
@@ -138,7 +152,7 @@ a {
 }
 
 /* =========================
-   HERO / INTRO
+   FREEBIE SECTION
 ========================= */
 
 .freebie-section {
