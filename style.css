@@ -1,35 +1,23 @@
-/* ROOT VARIABLES */
-:root {
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root{
   --sage: #888a65;
   --sage-dark: #6f7151;
-  --cream: #fff9f0;
+  --cream: #f4efe6;
+  --outer-bg: #d8d2c7;
   --ink: #6a563f;
-
   --line: rgba(106, 86, 63, .35);
-  --sage-line: rgba(136, 138, 101, .65);
-
   --max: 1040px;
-  --nav-gap: clamp(18px, 4vw, 70px);
 }
 
-/* GLOBAL RESET */
-* {
-  box-sizing: border-box;
-}
 
-html {
-  height: 100%;
-  margin: 0;
-}
-
+/* =========================
+   BODY (SIDE PATTERN LIVES HERE ONLY)
+========================= */
 body {
-  min-height: 100%;
   margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--ink);
-
-  /* SIDE PATTERN */
-  background-color: var(--cream);
+  background-color: var(--outer-bg);
 
   background-image:
     url("assets/side-pattern.png"),
@@ -38,239 +26,90 @@ body {
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
 
-  /* bigger pattern so it’s not tiny */
-  background-size: 1200px auto, 1200px auto;
+  /* THIS controls how wide the side art is */
+  background-size: 320px auto, 320px auto;
 }
 
-/* Force brand text color everywhere */
-h1, h2, h3, h4, h5, h6,
-p,
-a {
-  color: var(--ink);
-}
 
-/* TOP STRIP */
-.top-strip {
-  height: 30px;
-  background: var(--sage);
-}
-
-/* CENTER WRAPPER */
+/* =========================
+   CENTER CONTENT WRAPPER
+========================= */
 .page-wrapper {
   max-width: var(--max);
   margin: 0 auto;
   background-color: var(--cream);
-}
-
-/* HEADER */
-.site-header {
-  padding: 10px 0;
-  background-color: var(--cream);
-  background-image: none !important;
-  box-shadow: none !important;
-  border-bottom: none !important;
   position: relative;
   z-index: 2;
 }
 
-.brand-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
 
-.logo {
-  margin: 0;
+/* =========================
+   HEADER + NAV
+========================= */
+header {
+  background-color: var(--cream);
+  padding: 2rem 1.5rem;
   text-align: center;
-  padding: 8px 0 10px;
-}
-
-.logo-img {
-  display: block;
-  margin: 0 auto;
-  width: min(650px, 85%);
-  height: auto;
-}
-
-.icon-group {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.left-icons { justify-self: start; }
-.right-icons { justify-self: end; }
-
-.icon-plain img {
-  height: 28px;
-  display: block;
-}
-
-/* NAVIGATION */
-.nav-band {
-  background-color: var(--cream);
-  background-image: none !important;
-  border-top: 4px solid var(--sage-line);
-  border-bottom: 4px solid var(--sage-line);
-  box-shadow: none !important;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
-.nav-inner {
-  display: flex;
-  justify-content: center;
-  gap: var(--nav-gap);
-  padding: 12px 10px;
-  flex-wrap: wrap;
+nav {
+  background-color: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
-.nav-inner a {
+nav a {
+  color: var(--ink);
   text-decoration: none;
-  font-size: 26px;
+  margin: 0 1.5rem;
   font-weight: 500;
-  letter-spacing: .6px;
 }
 
-.nav-inner a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: var(--sage-dark);
 }
 
-/* FREEBIE SECTIONS */
-.freebie-section {
-  text-align: center;
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  color: var(--ink);
 }
 
-.freebie-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.freebie-text {
-  max-width: 700px;
-  margin: 0 auto 20px;
+p {
+  color: var(--ink);
   line-height: 1.7;
 }
 
-.freebie-image {
-  margin-bottom: 40px;
+
+/* =========================
+   FREEBIE SECTIONS FIX
+========================= */
+.freebie-section {
+  background-color: var(--cream);
+  padding: 3rem 1.5rem;
 }
 
-.freebie-image img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+.freebie-section h2 {
+  color: var(--ink);
 }
 
-.freebie-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 30px;
+.freebie-section p {
+  color: var(--ink);
 }
 
-.freebie-list li {
-  margin-bottom: 8px;
-}
 
-/* SALE BANNER */
-.sale-frame {
-  display: block;
-  width: min(620px, 82%);
-  margin: 8px auto 22px;
-}
-
-.sale-frame img {
-  width: 100%;
-  height: auto;
-}
-
-/* BUTTONS */
-.cta,
-.btn {
-  display: inline-block;
-  padding: 14px 40px;
-  border-radius: 999px;
-  background: var(--sage);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
-}
-
-.cta {
-  font-size: 32px;
-  margin-top: 10px;
-}
-
-.btn {
-  font-size: 20px;
-}
-
-.cta:hover,
-.btn:hover {
-  background: var(--sage-dark);
-}
-
-/* FOOTER */
-.site-footer {
-  text-align: center;
-  padding: 100px 20px 80px;
-}
-
-.footer-heading,
-.footer-social-heading {
-  font-size: 42px;
-  margin-bottom: 50px;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 40px 120px;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.footer-links a {
-  text-decoration: underline;
-  font-size: 28px;
-}
-
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-  align-items: center;
-}
-
-.social-item img {
-  height: 70px;
-  margin-bottom: 15px;
-}
-
-.social-item p {
-  font-size: 22px;
-
-/* RESPONSVIE */
-}
-
-@media (min-width: 768px) {
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 1.3rem;
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 520px){
-  .nav-inner a{ font-size: 20px; }
-  .cta{ font-size: 26px; padding: 14px 32px; }
+/* =========================
+   GENERAL SECTIONS
+========================= */
+section {
+  padding: 3rem 1.5rem;
+  background-color: var(--cream);
 }
