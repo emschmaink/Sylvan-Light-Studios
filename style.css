@@ -1,8 +1,5 @@
-/* =========================
-   ROOT VARIABLES
-========================= */
-
-:root{
+/* ROOT VARIABLES */
+:root {
   --sage: #888a65;
   --sage-dark: #6f7151;
   --cream: #fff9f0;
@@ -15,10 +12,7 @@
   --nav-gap: clamp(18px, 4vw, 70px);
 }
 
-/* =========================
-   GLOBAL RESET
-========================= */
-
+/* GLOBAL RESET */
 * {
   box-sizing: border-box;
 }
@@ -33,9 +27,10 @@ body {
   margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   color: var(--ink);
-  background-color: var(--cream);
 
   /* SIDE PATTERN */
+  background-color: var(--cream);
+
   background-image:
     url("assets/side-pattern.png"),
     url("assets/side-pattern.png");
@@ -43,45 +38,37 @@ body {
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
 
-  /* Adjust if needed: 900–1100px */
-  background-size: 900px auto, 900px auto;
+  /* bigger pattern so it’s not tiny */
+  background-size: 1000px auto, 1000px auto;
 }
 
-/* Force brand ink everywhere */
+/* Force brand text color everywhere */
 h1, h2, h3, h4, h5, h6,
 p,
 a {
   color: var(--ink);
 }
 
-/* =========================
-   TOP STRIP
-========================= */
-
-.top-strip{
+/* TOP STRIP */
+.top-strip {
   height: 30px;
   background: var(--sage);
 }
 
-/* =========================
-   CENTER WRAPPER
-========================= */
-
+/* CENTER WRAPPER */
 .page-wrapper {
   max-width: var(--max);
   margin: 0 auto;
   background-color: var(--cream);
-  position: relative;
-  z-index: 1;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-.site-header{
-  padding: 10px 0 0;
+/* HEADER */
+.site-header {
+  padding: 10px 0;
   background-color: var(--cream);
+  background-image: none !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
   position: relative;
   z-index: 2;
 }
@@ -92,13 +79,13 @@ a {
   align-items: center;
 }
 
-.logo{
+.logo {
   margin: 0;
   text-align: center;
   padding: 8px 0 10px;
 }
 
-.logo-img{
+.logo-img {
   display: block;
   margin: 0 auto;
   width: min(650px, 85%);
@@ -119,20 +106,18 @@ a {
   display: block;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
-.nav-band{
+/* NAVIGATION */
+.nav-band {
   background-color: var(--cream);
+  background-image: none !important;
   border-top: 4px solid var(--sage-line);
   border-bottom: 4px solid var(--sage-line);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+  box-shadow: none !important;
   position: relative;
   z-index: 2;
 }
 
-.nav-inner{
+.nav-inner {
   display: flex;
   justify-content: center;
   gap: var(--nav-gap);
@@ -140,21 +125,18 @@ a {
   flex-wrap: wrap;
 }
 
-.nav-inner a{
+.nav-inner a {
   text-decoration: none;
   font-size: 26px;
   font-weight: 500;
   letter-spacing: .6px;
 }
 
-.nav-inner a:hover{
+.nav-inner a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   FREEBIE SECTION
-========================= */
-
+/* FREEBIE SECTIONS */
 .freebie-section {
   text-align: center;
   padding: 80px 20px;
@@ -194,25 +176,19 @@ a {
   margin-bottom: 8px;
 }
 
-/* =========================
-   SALE BANNER
-========================= */
-
-.sale-frame{
+/* SALE BANNER */
+.sale-frame {
   display: block;
   width: min(620px, 82%);
   margin: 8px auto 22px;
 }
 
-.sale-frame img{
+.sale-frame img {
   width: 100%;
   height: auto;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
+/* BUTTONS */
 .cta,
 .btn {
   display: inline-block;
@@ -240,10 +216,7 @@ a {
   background: var(--sage-dark);
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 .site-footer {
   text-align: center;
   padding: 100px 20px 80px;
@@ -282,11 +255,9 @@ a {
 
 .social-item p {
   font-size: 22px;
-}
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSVIE */
+}
 
 @media (min-width: 768px) {
   h2 {
