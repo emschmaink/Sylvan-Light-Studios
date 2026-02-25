@@ -2,7 +2,7 @@
   /* Your brand colors */
   --sage: #888a65;
   --sage-dark: #6f7151;     /* slightly darker hover shade */
-  --cream: #d8d2c7; /* outer background color */;
+  --cream: #fff9f0; /* outer background color */;
 
   --ink: #6a563f;
 
@@ -39,7 +39,7 @@ body{
 /* BODY BACKGROUND (Side Pattern) */
 body {
   margin: 0;
-  background-color: #d8d2c7; /* outer background color */
+  background-color: #fff9f0; /* outer background color */
 
   background-image: 
     url("assets/side-pattern.png"),
@@ -55,7 +55,7 @@ body {
 .page-wrapper {
   max-width: 1040px;
   margin: 0 auto;
-  background-color: #f4efe6; /* your main cream color */
+  background-color: #fff9f0; /* your main cream color */
 }
 
 /* Center column */
