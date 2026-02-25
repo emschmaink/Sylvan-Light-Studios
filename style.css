@@ -24,12 +24,13 @@ body {
     url("assets/side-pattern.png");
 
   background-repeat: repeat-y, repeat-y;
-  background-position: left top, right top;
 
-  /* THIS controls how wide the side art is */
-  background-size: 320px auto, 320px auto;
+  /* Push pattern below header + nav */
+  background-position: left 220px, right 220px;
+
+  /* Make pattern properly large */
+  background-size: 520px auto, 520px auto;
 }
-
 
 /* =========================
    CENTER CONTENT WRAPPER
