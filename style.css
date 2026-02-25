@@ -2,7 +2,7 @@
   /* Your brand colors */
   --sage: #888a65;
   --sage-dark: #6f7151;     /* slightly darker hover shade */
-  --cream: #f4efe6; /* outer background color */;
+  --cream: #fff9f0; /* outer background color */;
 
   --ink: #6a563f;
 
@@ -11,6 +11,7 @@
 
   --max: 1040px;
   --nav-gap: clamp(18px, 4vw, 70px);
+  
 }
 
 *{ box-sizing: border-box; }
@@ -25,15 +26,27 @@ html, body{ height: 100%; }
 /* 3-column layout */
 .frame{
   display: grid;
-  grid-template-columns: minmax(170px, 1fr) minmax(0, var(--max)) minmax(170px, 1fr);
-  background: var(--cream);
+  grid-template-columns: 
+    minmax(170px, 1fr) 
+    minmax(0, var(--max)) 
+    minmax(170px, 1fr);
+
+  background-color: var(--cream);
+
+  background-image: 
+    url("assets/side-pattern.png"),
+    url("assets/side-pattern.png");
+
+  background-repeat: repeat-y, repeat-y;
+  background-position: left top, right top;
+  background-size: 320px auto, 320px auto;
 }
 
 /* CENTER CONTENT WRAPPER */
 .page-wrapper {
   max-width: 1040px;
   margin: 0 auto;
-  background-color: #f4efe6; /* your main cream color */
+  background-color: #fff9f0; /* your main cream color */
 }
 
 /* Center column */
@@ -45,7 +58,7 @@ html, body{ height: 100%; }
 /* Header */
 .site-header{
   padding: 10px 0 0;
-  background-color: #f4efe6; /* match your center cream */
+  background-color: #fff9f0; /* match your center cream */
 }
 
 /* Title row */
@@ -121,23 +134,6 @@ html, body{ height: 100%; }
 
 .nav-inner a:hover{
   text-decoration: underline;
-}
-
-/* BODY BACKGROUND (Side Pattern) */
-body{
-  margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--ink);
-
-  background-color: var(--cream);
-
-  background-image: 
-    url("assets/side-pattern.png"),
-    url("assets/side-pattern.png");
-
-  background-repeat: repeat-y, repeat-y;
-  background-position: left top, right top;
-  background-size: 300px auto, 300px auto;
 }
 
 /* Hero */
