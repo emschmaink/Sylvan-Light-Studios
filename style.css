@@ -12,79 +12,45 @@
 }
 
 /* =========================
-   TYPOGRAPHY SCALE FIX
+   HEADER LAYOUT FIX
 ========================= */
 
-header h1 {
-  font-size: 3.2rem; /* ~52px */
-  letter-spacing: 2px;
+.site-header {
+  padding: 2.5rem 2rem 1.5rem;
 }
 
-nav a {
-  font-size: 1.1rem;
-  letter-spacing: 2px;
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-h2 {
-  font-size: 2.4rem; /* Section titles */
-  margin-bottom: 2rem;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.9;
-}
-
-/* =========================
-   SECTION SPACING FIX
-========================= */
-
-section {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-/* Extra space between large blocks */
-section + section {
-  margin-top: 3rem;
-}
-
-/* =========================
-   HERO SALE BOX
-========================= */
-
-.sale-box {
-  max-width: 750px;
-  margin: 4rem auto;
-}
-
-.sale-box img {
-  width: 100%;
-  height: auto;
-}
-
-/* =========================
-   FREEBIE IMAGE SIZE
-========================= */
-
-.freebie-section img {
-  width: 600px;
+/* Logo */
+.logo-img {
+  width: 420px;
   max-width: 100%;
-  margin: 3rem auto;
+  display: block;
 }
 
-/* =========================
-   BUTTON SCALE
-========================= */
+/* Icon groups */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
 
-.button {
-  display: inline-block;
-  background: var(--sage);
-  color: white;
-  padding: 1.2rem 3.5rem;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  margin-top: 2rem;
+/* Header icons */
+.icon-plain img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* Make header feel balanced */
+.left-icons,
+.right-icons {
+  width: 140px;
+  justify-content: center;
 }
 
 /* =========================
@@ -230,4 +196,32 @@ img {
 .hero img {
   width: 400px;
   margin: 2rem auto;
+}
+
+.freebie-image img {
+  width: 580px;
+  max-width: 100%;
+  display: block;
+  margin: 3rem auto;
+}
+
+/* =========================
+   FOOTER SOCIAL ICONS
+========================= */
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.social-item {
+  text-align: center;
+}
+
+.social-item img {
+  width: 48px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
