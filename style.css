@@ -2,7 +2,7 @@
   /* Your brand colors */
   --sage: #888a65;
   --sage-dark: #6f7151;     /* slightly darker hover shade */
-  --cream: #fff9f0;
+  --cream: #d8d2c7; /* outer background color */;
 
   --ink: #6a563f;
 
@@ -47,6 +47,8 @@ body {
 
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
+  background-size: 180px auto, 180px auto;
+
 }
 
 /* CENTER CONTENT WRAPPER */
