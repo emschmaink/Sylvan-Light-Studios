@@ -16,13 +16,6 @@
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
 
-body{
-  margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--ink);
-  background: var(--cream);
-}
-
 /* Top strip */
 .top-strip{
   height: 30px;
@@ -37,9 +30,12 @@ body{
 }
 
 /* BODY BACKGROUND (Side Pattern) */
-body {
+body{
   margin: 0;
-  background-color: #fff9f0; /* outer background color */
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--ink);
+
+  background-color: var(--cream);
 
   background-image: 
     url("assets/side-pattern.png"),
@@ -47,8 +43,7 @@ body {
 
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
-  background-size: 180px auto, 180px auto;
-
+  background-size: 200px auto, 200px auto;
 }
 
 /* CENTER CONTENT WRAPPER */
