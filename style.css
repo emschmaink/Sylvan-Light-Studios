@@ -262,3 +262,56 @@ body {
 .btn:hover {
   background-color: var(--sage-dark);
 }
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.footer-heading {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px 120px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  font-size: 28px;
+  color: var(--ink);
+}
+
+.footer-social-heading {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  align-items: center;
+}
+
+.social-item {
+  text-align: center;
+}
+
+.social-item img {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.social-item p {
+  font-size: 22px;
+}
