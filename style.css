@@ -12,6 +12,82 @@
 }
 
 /* =========================
+   TYPOGRAPHY SCALE FIX
+========================= */
+
+header h1 {
+  font-size: 3.2rem; /* ~52px */
+  letter-spacing: 2px;
+}
+
+nav a {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.4rem; /* Section titles */
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   SECTION SPACING FIX
+========================= */
+
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Extra space between large blocks */
+section + section {
+  margin-top: 3rem;
+}
+
+/* =========================
+   HERO SALE BOX
+========================= */
+
+.sale-box {
+  max-width: 750px;
+  margin: 4rem auto;
+}
+
+.sale-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FREEBIE IMAGE SIZE
+========================= */
+
+.freebie-section img {
+  width: 600px;
+  max-width: 100%;
+  margin: 3rem auto;
+}
+
+/* =========================
+   BUTTON SCALE
+========================= */
+
+.button {
+  display: inline-block;
+  background: var(--sage);
+  color: white;
+  padding: 1.2rem 3.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* =========================
    GLOBAL RESET
 ========================= */
 * {
